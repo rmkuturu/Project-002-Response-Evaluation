@@ -1,4 +1,4 @@
-# Project 002 - Response Evaluation
+# AI_Customer_Support_chatbot  - Response Evaluation
 
 This portfolio project packages a customer-support response evaluation dataset with documentation artifacts for annotation guidelines, QA review, project summary, and reflection.
 
