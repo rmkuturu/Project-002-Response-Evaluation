@@ -1,6 +1,6 @@
-# AI_Customer_Support_chatbot  - Response Evaluation
+# Project 002 - Response Evaluation
 
-This portfolio project packages a customer-support response evaluation dataset with documentation artifacts for annotation guidelines, QA review, project summary, and reflection.
+This repository presents a standalone AI evaluation project focused on comparing paired customer-support responses, identifying the stronger answer, and documenting quality-review reasoning in a portfolio-ready format.
 
 ## Included Files
 
@@ -10,22 +10,40 @@ This portfolio project packages a customer-support response evaluation dataset w
 - `Project_Summary.docx`
 - `Project_Reflection.docx`
 - `Application_Blurb.md`
+- `analyze_dataset.py`
+- `analysis_summary.md`
+- `requirements.txt`
 
 ## Project Focus
 
-The project evaluates paired customer-support responses and identifies the stronger response using evidence-based criteria:
+The project evaluates paired customer-support responses using evidence-based criteria:
 - factual accuracy
 - helpfulness
 - hallucination detection
 - annotation rationale quality
 - QA consistency
 
-## Notes
+## Python Component
 
-- The dataset contains 100 rows on the main evaluation sheet.
-- The IAA sheet is labeled `n=20` and contains two trailing non-data rows; the valid agreement sample is 20 rows.
-- Original annotation work remains in the spreadsheet. The attached documents are portfolio-ready supporting materials for presenting the project clearly.
+The repo includes a lightweight Python script that reads the Excel workbook and produces a Markdown summary of:
+- preferred-response counts
+- hallucination and safety-flag totals
+- category distribution
+- average scoring patterns
+- inter-annotator agreement for the QA sample
+
+Run it with:
+
+`python analyze_dataset.py`
+
+## Key Dataset Facts
+
+- The main evaluation sheet contains 100 rows.
+- Preferred responses are split evenly between A and B.
+- Hallucinations are flagged in 25 rows.
+- Safety flags remain `N` across the dataset.
+- The IAA sample contains 20 valid ticket rows with 70.0% agreement.
 
 ## Portfolio Positioning
 
-This is presented as a standalone evaluation project centered on annotation judgment, QA documentation, and response-quality analysis for customer-support use cases.
+This is presented as a standalone evaluation project that combines annotation documentation with a small Python-based reporting workflow for customer-support response analysis.
